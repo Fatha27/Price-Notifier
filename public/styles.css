@@ -1,0 +1,196 @@
+/* styles.css */
+@-webkit-keyframes slide-in-blurred-bottom{0%{-webkit-transform:translateY(1000px) scaleY(2.5) scaleX(.2);transform:translateY(1000px) scaleY(2.5) scaleX(.2);-webkit-transform-origin:50% 100%;transform-origin:50% 100%;-webkit-filter:blur(40px);filter:blur(40px);opacity:0}100%{-webkit-transform:translateY(0) scaleY(1) scaleX(1);transform:translateY(0) scaleY(1) scaleX(1);-webkit-transform-origin:50% 50%;transform-origin:50% 50%;-webkit-filter:blur(0);filter:blur(0);opacity:1}}@keyframes slide-in-blurred-bottom{0%{-webkit-transform:translateY(1000px) scaleY(2.5) scaleX(.2);transform:translateY(1000px) scaleY(2.5) scaleX(.2);-webkit-transform-origin:50% 100%;transform-origin:50% 100%;-webkit-filter:blur(40px);filter:blur(40px);opacity:0}100%{-webkit-transform:translateY(0) scaleY(1) scaleX(1);transform:translateY(0) scaleY(1) scaleX(1);-webkit-transform-origin:50% 50%;transform-origin:50% 50%;-webkit-filter:blur(0);filter:blur(0);opacity:1}}
+ @-webkit-keyframes slide-in-right{0%{-webkit-transform:translateX(1000px);transform:translateX(1000px);opacity:0}100%{-webkit-transform:translateX(0);transform:translateX(0);opacity:1}}@keyframes slide-in-right{0%{-webkit-transform:translateX(1000px);transform:translateX(1000px);opacity:0}100%{-webkit-transform:translateX(0);transform:translateX(0);opacity:1}}
+ @-webkit-keyframes slide-in-left{0%{-webkit-transform:translateX(-1000px);transform:translateX(-1000px);opacity:0}100%{-webkit-transform:translateX(0);transform:translateX(0);opacity:1}}@keyframes slide-in-left{0%{-webkit-transform:translateX(-1000px);transform:translateX(-1000px);opacity:0}100%{-webkit-transform:translateX(0);transform:translateX(0);opacity:1}}
+ @-webkit-keyframes tracking-in-expand{0%{letter-spacing:-.5em;opacity:0}40%{opacity:.6}100%{opacity:1}}@keyframes tracking-in-expand{0%{letter-spacing:-.5em;opacity:0}40%{opacity:.6}100%{opacity:1}}
+ @-webkit-keyframes tracking-in-contract-bck-bottom{0%{letter-spacing:1em;-webkit-transform:translateZ(400px) translateY(300px);transform:translateZ(400px) translateY(300px);opacity:0}40%{opacity:.6}100%{-webkit-transform:translateZ(0) translateY(0);transform:translateZ(0) translateY(0);opacity:1}}@keyframes tracking-in-contract-bck-bottom{0%{letter-spacing:1em;-webkit-transform:translateZ(400px) translateY(300px);transform:translateZ(400px) translateY(300px);opacity:0}40%{opacity:.6}100%{-webkit-transform:translateZ(0) translateY(0);transform:translateZ(0) translateY(0);opacity:1}}
+/* CSS for parallax effect */
+
+.logocontainer{
+  text-align: center;
+}
+.head{
+  margin-top: 20px;
+  font-size:55px ;
+  -webkit-animation: tracking-in-expand 1s ease both;
+  animation:tracking-in-expand 1s ease both;
+}
+.tag{
+  flex-wrap: wrap;
+}
+
+.track,.compare,.save{
+  width: 30px;
+  height: 30px;
+  position: relative;
+  bottom: -10px;
+ left: -15px;
+
+}
+.tagline{
+  position: relative;
+  display: inline;
+  margin: 5px 15px;
+  font-size: large;
+  -webkit-animation: tracking-in-contract-bck-bottom 1s ease both;
+  animation:tracking-in-contract-bck-bottom 1s ease both;
+  animation-delay: 0.5s;
+  bottom: -10px;
+}
+
+.maincontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Additional styling for the parent container if needed */
+}
+
+.wholemiddle{
+  position: relative;
+  width: 90%; /* Adjust the width and height as needed */
+  height: 700px;
+  /* border: 2px solid #ccc; Optional: Add a border for visualization */
+  top: -30px;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.top-left,
+.top-right,
+.bottom-left,
+.bottom-right {
+  position: absolute;
+  width: 300px; /* Adjust the size of images as needed */
+  height: 300px;
+}
+
+.top-left {
+  top: -30px;
+  left: 0;
+  -webkit-animation: slide-in-left 1s ease both;
+  animation: slide-in-left 1s ease both;
+  animation-delay: 1s;
+}
+
+.top-right {
+  top: 0;
+  right: 0;
+  -webkit-animation: slide-in-right 1s ease both;
+  animation:slide-in-right 1s ease both;
+  animation-delay: 1s;
+}
+
+.bottom-left {
+  bottom: -70px;
+  left: 0;
+  -webkit-animation: slide-in-left 1s ease both;
+  animation: slide-in-left 1s ease both;
+  animation-delay: 1s;
+}
+
+.bottom-right {
+  bottom: -60px;
+  right: -40px;
+  -webkit-animation: slide-in-right 1s ease both;
+  animation: slide-in-right 1s ease both;
+  animation-delay: 1s;
+}
+
+.abouthead{
+  position: relative;
+  top: -30px;
+}
+
+.center-text {
+  position: absolute;
+  top: 24%; /* Center the text vertically */
+ left: 10%;   /* Center the text horizontally */
+  transform: translate(-50%, -50%);
+  width: 80%; /* Adjust the width of the text container */
+  text-align: center;
+  font-size: 19px; /* Adjust the font size as needed */
+ -webkit-animation: slide-in-blurred-bottom 1s ease both;
+  animation: slide-in-blurred-bottom 1s ease both;
+  animation-delay: 0.7s;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center; /* Centers the buttons horizontally */
+    margin-top: 20px;
+    text-align: center;
+    position: relative;
+    right: -100px;
+    text-align: center;
+}
+
+.services{
+  position: relative;
+  width: 330px;
+  right: -190px;
+}
+
+button {
+  height: 4em;
+  width: 15em;
+  border: none;
+  border-radius: 40px;
+  background-color: #fff;
+  margin-left: 100px;
+  position: relative;
+    bottom: -100px;
+    left: -150px;
+}
+
+.buttons{
+  position: relative;
+  left: -100px;
+}
+
+button span {
+  z-index: 1;
+  display: inline-block;
+  background-color: black;
+  height: 3em;
+  width: 11.5em;
+  border-radius: 25px;
+  color: #fff;
+  line-height: 55px;
+  font-size: 18px;
+  letter-spacing: 3px;
+  transition: all 0.5s;
+}
+
+button .container {
+  z-index: -1;
+  width: 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  transform: translateY(-50px);
+  transition: all 0.4s;
+}
+
+button .container img {
+  opacity: 0;
+}
+
+button:hover span {
+  width: 0;
+
+}
+
+button:hover .container {
+  z-index: 2;
+  width: 100%;
+  /* border: 3px solid black; */
+  border-radius: 40px;
+}
+button:hover img{
+  opacity: 1;
+  margin: 15px;
+
+}

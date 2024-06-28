@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="./images/tm.png">
+  <link rel="stylesheet" href="./products.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href=""> -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://kit.fontawesome.com/c5ea34b6a3.js" crossorigin="anonymous"></script>
+  <title>Products</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Tenth navbar example">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample08"
+        aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample08">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" style="margin: 0 60px;" href="./index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" style="margin: 0 60px;" href="./products.html">Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" style="margin: 0 60px;" href="./stockscrypto.html">Crypto / Stocks</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div id="products" class="section">
+    <h1 class="prodhead">Product Monitoring</h1>
+    <div class="content">
+      <div class="clipart-image">
+        <img src="./images/products_clipart.png" alt="Product Clipart">
+      </div>
+      <div class="form-container">
+        <div class="form-section">
+          <div class="top-middle-image" id="top-hidden-logo">
+
+          </div>
+          <form id="product-form" action="/" method="post">
+            <!-- logo carousel  -->
+            <div class="form-field">
+              <div class="changebuttondiv">
+                <button class="change-logo-button" id="hide-logo">Change Website</button>
+              </div>
+              <div class="logo-container" id="logo-section">
+                <div class="logo-wrapper">
+                  <div class="logo-image" data-logo-id="amazon">
+                    <img src="./images/amazon-round-circle-logo-symbol-button-19641.png" alt="amazon">
+                    <h4 class="logo-heading">Amazon</h4>
+                  </div>
+                  <div class="logo-image" data-logo-id="flipkart">
+                    <img src="./images/[CITYPNG.COM]HD Flipkart Round Logo Icon Transparent PNG - 2968x3114.png"
+                      alt="flipkart">
+                    <h4 class="logo-heading">Flipkart</h4>
+                  </div>
+                  <div class="logo-image" data-logo-id="nykaa">
+                    <img src="./images/nykaapnground.png" alt="Nykaa">
+                    <h4 class="logo-heading">Nykaa
+                    </h4>
+                  </div>
+                  <div class="logo-image" data-logo-id="shopclues">
+                    <img src="./images/1220307_shopclues_icon.png" alt="shopclues">
+                    <h4 class="logo-heading">Shopclues</h4>
+                  </div>
+                  <div class="logo-image" data-logo-id="snapdeal">
+                    <img src="./images/snapdeal-logo-35C2DB3916-seeklogo.com.png" alt="snapdeal">
+                    <h4 class="logo-heading">snapdeal</h4>
+                  </div>
+                  <!-- Add more logo images here -->
+                </div>
+              </div>
+            </div>
+
+            <!--------------------  ------------------->
+            <div class="form-field">
+              <label for="email" id="labeltext">Email:</label>
+              <input type="email" id="email" name="prodEmail" required>
+            </div>
+            <div class="form-field">
+              <label for="url" id="labeltext">Product URL:</label>
+              <input type="text" id="url" name="prodLink" required>
+            </div>
+            <div class="form-field">
+              <label for="price" id="labeltext">Target Price:</label>
+              <input type="text" id="price" name="prodPrice" required>
+            </div>
+
+
+            <div class="form-field">
+              <div class="radio-group">
+                <label>
+                  <input type="radio" name="monitor" value="price-drop" class="btn btn-primary" data-bs-toggle="modal"
+                    data-bs-target="#staticBackdrop">
+                  <span>Monitor till price drops</span>
+                </label>
+                <!-- Button trigger modal -->
+                <!-- Modal -->
+
+                <label>
+                  <input type="radio" name="monitor" value="custom-duration">
+                  <span>Custom time duration</span>
+                </label>
+              </div>
+            </div>
+            <div class="custom-duration-field" style="display: none;">
+              <div class="form-field">
+                <label for="custom-duration">Number of Days:</label>
+                <input type="text" id="duration" name="duration">
+              </div>
+            </div>
+            <div class="form-field">
+              <input id="permission-button" class="submit-button" type="submit" value="Submit">
+
+            </div>
+          </form>
+          <img src="./vectorgif/animation_lks8u3an (1).gif" id="loadingSpinner" style="display: none;" alt="loadanimation">
+        </div>
+      </div>
+    </div>
+  </div><br><br>
+  <div class="cardsection">
+    <div class="card">
+      <div class="card-media">
+        <img src="./vectorgif/firstcard.gif" alt="Card Image">
+      </div>
+      <div class="card-content">
+        <h3 class="card-heading">STEP 1</h3>
+
+        <p>Copy the <b>Link &#128279;</b> of the product you want to monitor</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-media">
+        <img src="./vectorgif/pastelink.gif" alt="Card Image">
+      </div>
+      <div class="card-content">
+        <h3 class="card-heading">STEP 2</h3>
+
+        <p>Fill in the <b>Details</b> carefully and submit the form . You will receive a <b>confirmation mail</b> form
+          us.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-media">
+        <img src="./vectorgif/monitoring_product.gif" alt="Card Image">
+      </div>
+      <div class="card-content">
+        <h3 class="card-heading">STEP 3</h3>
+
+        <p>Now sit back and chill as we <b>Monitor</b> your product for you .</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-media">
+        <img src="./vectorgif/get_notofoed.gif" alt="Card Image">
+      </div>
+      <div class="card-content">
+        <h3 class="card-heading">STEP 4</h3>
+
+        <p>As soon as the <b>price</b> of product <b>drops</b>, you will be <b>notified</b> by an Email
+          &#128231</p>
+      </div>
+    </div>
+  </div>
+  <!-- footer -->
+  <div class="container">
+    <footer class="py-3 my-4">
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item"><a href="./index.html" class="nav-link px-2 text-body-secondary"
+            style="margin: 0 20px;">Home</a></li>
+        <li class="nav-item"><a href="./products.html" class="nav-link px-2 text-body-secondary"
+            style="margin: 0 20px;">Products</a></li>
+        <li class="nav-item"><a href="./stockscrypto.html" class="nav-link px-2 text-body-secondary"
+            style="margin: 0 20px;">Crypto / Stocks</a></li>
+        <li class="nav-item"><a href="./faq.html" class="nav-link px-2 text-body-secondary" style="margin: 0 20px;">FAQs</a></li>
+        <li class="nav-item"><a href="./index.html#aboutus" class="nav-link px-2 text-body-secondary"
+            style="margin: 0 20px;">About</a></li>
+      </ul>
+      <p class="text-center text-body-secondary">© 2023 Company, Inc</p>
+    </footer>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Get all the heading links
+
+
+      /////////////////logo carousel//////////////
+      const formContainer = document.querySelector('.form-container');
+      const logoImages = document.querySelectorAll('.logo-image img');
+
+      function handleLogoSelection(event) {
+        const selectedImage = event.target.closest('.logo-image');
+        const logoImages = document.querySelectorAll('.logo-image');
+
+        logoImages.forEach((image) => {
+          image.classList.remove('selected');
+        });
+
+        selectedImage.classList.add('selected');
+
+        // Clear previously added classes
+        formContainer.className = 'form-container';
+
+        // Apply specific styles based on the selected logo
+        if (selectedImage) {
+          const logoId = selectedImage.getAttribute('data-logo-id');
+          formContainer.classList.add(`logo-${logoId}`);
+        }
+      }
+
+      // Attach click event listener to logo images
+      logoImages.forEach((image) => {
+        image.addEventListener('click', handleLogoSelection);
+      });
+
+      /////////////// Button and Section Functionality ///////////////
+
+      const changeLogoButton = document.getElementById('hide-logo');
+      const logoSection = document.getElementById('logo-section');
+
+      // Hide the change logo button initially
+      changeLogoButton.style.display = 'none';
+
+      // Function to show the change logo button and hide the logo section
+      function showChangeLogoButton() {
+        changeLogoButton.style.display = 'flex';
+        logoSection.style.display = 'none';
+      }
+
+      // Function to show the logo section and hide the change logo button
+      function showLogoSection() {
+        changeLogoButton.style.display = 'none';
+        logoSection.style.display = 'block';
+      }
+
+      // Attach click event listener to the change logo button
+      changeLogoButton.addEventListener('click', showLogoSection);
+
+      //////////////////changes according to image selected///////////////////
+      // Get the form element
+      var form = $('.form-section');
+      var labeltext = $('label');
+      var buttons = $('.radio-group span');
+      var submitbutton = $('.submit-button');
+      var changewebsite = $('.change-logo-button');//for changeing logo button
+      var logoheading = $('.logo-heading');
+
+      // Create the top middle image element
+      var topMiddleImage = $('<div class="top-middle-image"></div>');
+      var hiddenimagelogo = document.getElementById("top-hidden-logo");
+
+      function showImage(imagePath) {
+        hiddenimagelogo.innerHTML = '';
+        var img = $('<img>').attr('src', imagePath).addClass('top-middle-image');
+        hiddenimagelogo.appendChild(img[0]);
+      }
+
+      topMiddleImage.hide(); // Hide the top middle image initially
+      form.find('.form-section').append(topMiddleImage);
+
+      // Function to handle logo image click event
+      $('.logo-image').click(function () {
+        // Get the data-logo-id attribute value
+        var logoId = $(this).data('logo-id');
+
+        // Update the form based on the selected logo
+        if (logoId === 'amazon') {
+          // Update the form for Amazon logo
+          form.css('background-color', '#131921');
+          form.css('border', '5px solid orange');
+          labeltext.css('color', '#ea9533');
+          buttons.css('background-color', '#ea9533');
+          buttons.css('color', '#131921');
+          buttons.css('border', 'none');
+          submitbutton.css('background-color', '#ea9533');
+          submitbutton.css('color', '#121921');
+          logoheading.css('color', '#ffffff');
+
+          showChangeLogoButton()
+          // Set the image path for Amazon logo
+          var imagePath = './images/amazon-round-circle-logo-symbol-button-19641.png';
+          showImage(imagePath);
+        } else if (logoId === 'flipkart') {
+          // Update the form for Flipkart logo
+          form.css('background-color', '#0076f8');
+          form.css('border', '5px solid #fae700');
+          buttons.css('background-color', '#fae700');
+          buttons.css('color', '#0076f8');
+          buttons.css('border', 'none');
+          submitbutton.css('background-color', '#fae700');
+          submitbutton.css('color', '#0076f8');
+          labeltext.css('color', '#fae700');
+          showChangeLogoButton()
+          // Set the image path for Flipkart logo
+          var imagePath = './images/[CITYPNG.COM]HD Flipkart Round Logo Icon Transparent PNG - 2968x3114.png';
+          showImage(imagePath);
+        } else if (logoId === 'nykaa') {
+          // Update the form for Nykaa logo
+          form.css('border', '5px solid #ffffff');
+          buttons.css('background-color', '#ffffff');
+          buttons.css('color', '#fc2678');
+          buttons.css('border', 'none');
+          submitbutton.css('background-color', '#ffffff');
+          submitbutton.css('color', '#fc2678');
+          form.css('background-color', '#fc2678');
+          labeltext.css('color', '#ffffff');
+          showChangeLogoButton()
+          // Set the image path for Nykaa logo
+          var imagePath = './images/nykaapnground.png';
+          showImage(imagePath);
+        } else if (logoId === 'shopclues') {
+          // Update the form for Shopclues logo
+          form.css('background-color', '#17a2b3');
+          labeltext.css('color', '#fdfefe');
+          form.css('border', '5px solid #ffffff');
+          buttons.css('background-color', '#ffffff');
+          buttons.css('color', '#17a2b3');
+          buttons.css('border', 'none');
+          submitbutton.css('background-color', '#ffffff');
+          submitbutton.css('color', '#17a2b3');
+          showChangeLogoButton()
+          // Set the image path for Shopclues logo
+          var imagePath = './images/1220307_shopclues_icon.png';
+          showImage(imagePath);
+        } else if (logoId === 'snapdeal') {
+          // Update the form for Snapdeal logo
+          form.css('background-color', '#e40046');
+          labeltext.css('color', '#ffffff');
+          form.css('border', '5px solid #ffffff');
+          buttons.css('background-color', '#ffffff');
+          buttons.css('color', '#e40046');
+          buttons.css('border', 'none');
+          submitbutton.css('background-color', '#ffffff');
+          submitbutton.css('color', '#e40046');
+          showChangeLogoButton()
+          // Set the image path for Snapdeal logo
+          var imagePath = './images/snapdeal-logo-35C2DB3916-seeklogo.com.png';
+          showImage(imagePath);
+        }
+        //path for hidden logo
+        topMiddleImage.html('<img class="top-middle-image" src="' + imagePath + '" alt="Logo">'); var formWidth = form.outerWidth();
+        var imageWidth = topMiddleImage.find('img').outerWidth();
+        var offsetLeft = (formWidth / 2) - (imageWidth / 2);
+
+        // Position the image at the top middle of the form
+        topMiddleImage.css({
+          position: 'absolute',
+          top: 0,
+          left: offsetLeft
+        });
+
+        // Scroll the form to the top middle
+        $('html, body').animate({
+          scrollTop: form.offset().top - ($(window).height() / 2) + (form.height() / 2)
+        }, 500);
+
+        // Show the top middle image
+        topMiddleImage.show();
+      });
+      //radio button
+      const radioButtons = document.querySelectorAll('.radio-group input[type="radio"]');
+      const customDurationField = document.querySelector('.custom-duration-field');
+
+      radioButtons.forEach((radio) => {
+        radio.addEventListener('change', () => {
+          radioButtons.forEach((otherRadio) => {
+            otherRadio.parentElement.querySelector('span').classList.remove('selected');
+          });
+
+          radio.parentElement.querySelector('span').classList.add('selected');
+
+          if (radio.value === 'custom-duration') {
+            console.log("customselected")
+            customDurationField.style.display = 'block';
+          } else {
+            customDurationField.style.display = 'none';
+          }
+        });
+      });
+
+
+
+      // Lock and fade submit button until all form fields are filled
+
+    //   $(document).ready(function() {
+    //     $("#product-form").submit(function(event) {
+    //         // event.preventDefault();
+    //         $("#loadingSpinner").show();
+    //         $("#product-form").hide();
+    //         setTimeout(function() {
+    //             window.location.href = "./products.html"; 
+    //         }, 3000); // 3 seconds
+    //     });
+    // });
+
+    $(document).ready(function() {
+            $("#product-form").submit(function(event) {
+                // Prevent the default form submission behavior
+                event.preventDefault();
+        
+                // Show the loading spinner and hide the form
+                $("#loadingSpinner").show();
+                $("#product-form").hide();
+        
+                // Serialize the form data
+                const formData = $(this).serialize();
+        
+                // Submit the form data via AJAX
+                $.ajax({
+                    url: "/", // Replace with the appropriate server URL
+                    method: "POST",
+                    data: formData,
+                    success: function() {
+                        // Redirect to the homepage after 3 seconds
+                        setTimeout(function() {
+                            window.location.href = "./products.html"; //Replace "homepage.html" with your actual homepage URL
+                        }, 3000); // 3 seconds
+                    },
+                    error: function() {
+                        // Handle AJAX errors if needed
+                    }
+                });
+            });
+        });
+
+    })
+
+  </script>
+</body>
+
+</html>
