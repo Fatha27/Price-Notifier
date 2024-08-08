@@ -14,7 +14,9 @@ The Price Notifier is a user-friendly tool designed to solve the challenges of m
 - Frontend: HTML, CSS, JavaScript, React
 - Deployment: Heroku.
 
-## Project Structure
+## Project Architecture and Data flow
+![image](https://github.com/user-attachments/assets/287b659c-7e92-4f0a-95d2-55a973ff6846)
+
 The website is divided into two main sections:
 
 1. E-commerce Products
